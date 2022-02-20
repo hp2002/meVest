@@ -1,10 +1,9 @@
 .App {
   color: #27233a;
-  margin: 30px;
-  margin-left: 20%;
-  margin-right: 20%;
-  background-color: #55d6be;
-  padding: 15px;
+  background-color: #93e1d8;
+  padding: 30px;
+  padding-left: 25%;
+  padding-right: 25%;
   border-radius: 10px;
 }
 
@@ -13,16 +12,16 @@ h1 {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   font-size: 60px;
-  font-style: italic;
 }
 
 .today {
   margin: 20px;
   display: block;
   padding: 20px;
-  background-color: #7cea9c;
+  background-color: #ddfff7;
   font-size: large;
   font-weight: 500;
+  border-radius: 5px;
 }
 
 .today-button {
@@ -36,9 +35,15 @@ h1 {
   margin-right: 20%;
   font-size: x-large;
   font-weight: bold;
-  background-color: #7cea9c;
+  background-color: #ddfff7;
   text-align: center;
   color: #364652;
+}
+
+.add-goal-button {
+  margin: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .money-card {
@@ -48,7 +53,7 @@ h1 {
   margin-right: 20%;
   font-size: x-large;
   font-weight: bold;
-  background-color: #7cea9c;
+  background-color: #ddfff7;
   text-align: center;
   color: rgb(19, 104, 2);
 }
@@ -60,5 +65,11 @@ h1 {
 }
 
 .progress-div {
-  margin: 10px;
+  margin: 0px;
+}
+
+.progress-title {
+  text-align: center;
+  font-size: 60px;
+  margin-bottom: 10px;
 }

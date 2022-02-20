@@ -1,9 +1,7 @@
 import { useEffect, useState } from 'react';
 import {Button, Card, ProgressBar} from 'react-bootstrap';
-import { Modal } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import GoalSetting from './GoalSetting';
 
 
 const DAYS_IN_A_MONTH = 31;
@@ -20,10 +18,11 @@ function InputToday(props) {
   return(
     <div>
       <Card className="today">
-        Did you complete your goal today?
+       Did you complete your goal today? 💪
         <Button onClick={handleNo} className="today-button" variant="danger">No.</Button>
         <Button onClick={handleYes} variant="success">Yes!</Button>
       </Card>
+      <div>*The balance that you lose is donated to charities</div>
     </div>
   )
 }
@@ -31,15 +30,18 @@ function InputToday(props) {
 function App() {
   const [startAmount, setStartAmount] = useState(0.00);
   const [amount, setAmount] = useState(startAmount);
-  const [goal, setGoal] = useState('');
+  const [goal, setGoal] = useState('...');
   const [days, setDays] = useState(0);
   const [noDays, setNoDays] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
 
 
   function checkDays(TotalDays) {
     if(TotalDays >= DAYS_IN_A_MONTH) {
+      alert("Congradulations! You completed a month, here are your stats\n Successful Days: " + days + "\n Unsuccessful Days: " + noDays);
       setDays(0);
       setNoDays(0);
+      setIsVisible(true);
     }
   }
 
@@ -69,24 +71,25 @@ function App() {
 
   return (
     <div className="App">
-      <h1>meVest</h1>
-      <investmentModal/>
+      <h1>📈meVest📈</h1>
       <Card className='goal-card'>
         My goal is {goal}
+        {isVisible && <Button className='add-goal-button' onClick={()=>{setGoal(prompt("My goal is...",""));setIsVisible(false)}}>Set Goal</Button>}
       </Card>
-      <GoalSetting changeGoal={setGoal} />
+      
       <Card className='money-card'>
-      Balance : ${amount.toFixed(2)}
+      Balance💸 ${amount.toFixed(2)}
       <Button onClick={handleInvest} className='invest-button' variant='success'>meVest</Button>
       </Card>
-      <InputToday increment={incrementYesDays} decrement={incrementNoDays} />
+
       <div className='progress-div'>
-        <h3 className='progress-title'>Progress {days + noDays} Days</h3>
+        <h3 className='progress-title'> Day {days + noDays}</h3>
         <ProgressBar>
-          <ProgressBar variant="success" striped animated now={(days/DAYS_IN_A_MONTH)*100} key={1}/>
-          <ProgressBar variant="danger" striped animated now={(noDays/DAYS_IN_A_MONTH)*100} key={2}/>
+          <ProgressBar variant="success" label={`${days}`} striped animated now={(days/DAYS_IN_A_MONTH)*100} key={1}/>
+          <ProgressBar variant="danger" label={`${noDays}`} striped animated now={(noDays/DAYS_IN_A_MONTH)*100} key={2}/>
         </ProgressBar>
       </div>
+      <InputToday increment={incrementYesDays} decrement={incrementNoDays} />
     </div>
   );
 }
