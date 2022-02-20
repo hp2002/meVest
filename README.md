@@ -1,5 +1,5 @@
 ![ss](https://user-images.githubusercontent.com/48922638/154841008-9f9b43ca-e5a5-4ee7-8cc0-3e23419e8712.png)
-##Inspiration
+## Inspiration
 As I was brainstorming an idea for the topic, I remembered a blockage me and my friends faced in high school. I always needed someone to be accountable so that I can finish
 my tasks. If there was a way I can take a habit tracker seriously, it would be of great help for people facing issues with addictions and sticking to habits. This is how meVest was
 created where you invest in yourself so you thrive with your own discipline!
