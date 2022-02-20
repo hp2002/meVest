@@ -38,9 +38,10 @@ function App() {
 
   function checkDays(TotalDays) {
     if(TotalDays >= DAYS_IN_A_MONTH) {
-      alert("Congradulations! You completed a month, here are your stats\n Successful Days: " + days + "\n Unsuccessful Days: " + noDays);
+      alert("✨Congradulations! You completed a month, here are your stats✨\n The leftover balance has been added back to your account!\n Successful Days: " + days + "\n Unsuccessful Days: " + noDays);
       setDays(1);
       setNoDays(0);
+      setAmount(0.0);
       setIsVisible(true);
     }
   }
