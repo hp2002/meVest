@@ -1,0 +1,13 @@
+.GoalSetting {
+  background-color: #55d6be;
+  padding: 20px;
+  margin: 30px;
+  border-radius: 10px;
+}
+
+.goal-title {
+  font-weight: 500;
+  font-size: 15px;
+  font-family: inherit;
+  font-style: italic;
+}

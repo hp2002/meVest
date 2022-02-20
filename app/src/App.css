@@ -1,0 +1,64 @@
+.App {
+  color: #27233a;
+  margin: 30px;
+  margin-left: 20%;
+  margin-right: 20%;
+  background-color: #55d6be;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 60px;
+  font-style: italic;
+}
+
+.today {
+  margin: 20px;
+  display: block;
+  padding: 20px;
+  background-color: #7cea9c;
+  font-size: large;
+  font-weight: 500;
+}
+
+.today-button {
+  margin: 20px;
+}
+
+.goal-card {
+  padding: 20px;
+  margin: 30px;
+  margin-left: 20%;
+  margin-right: 20%;
+  font-size: x-large;
+  font-weight: bold;
+  background-color: #7cea9c;
+  text-align: center;
+  color: #364652;
+}
+
+.money-card {
+  padding: 20px;
+  margin: 30px;
+  margin-left: 20%;
+  margin-right: 20%;
+  font-size: x-large;
+  font-weight: bold;
+  background-color: #7cea9c;
+  text-align: center;
+  color: rgb(19, 104, 2);
+}
+
+.invest-button {
+  margin: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.progress-div {
+  margin: 10px;
+}
