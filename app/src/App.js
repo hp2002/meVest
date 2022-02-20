@@ -31,7 +31,7 @@ function App() {
   const [startAmount, setStartAmount] = useState(0.00);
   const [amount, setAmount] = useState(startAmount);
   const [goal, setGoal] = useState('...');
-  const [days, setDays] = useState(0);
+  const [days, setDays] = useState(1);
   const [noDays, setNoDays] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
 
@@ -39,7 +39,7 @@ function App() {
   function checkDays(TotalDays) {
     if(TotalDays >= DAYS_IN_A_MONTH) {
       alert("Congradulations! You completed a month, here are your stats\n Successful Days: " + days + "\n Unsuccessful Days: " + noDays);
-      setDays(0);
+      setDays(1);
       setNoDays(0);
       setIsVisible(true);
     }
@@ -85,7 +85,7 @@ function App() {
       <div className='progress-div'>
         <h3 className='progress-title'> Day {days + noDays}</h3>
         <ProgressBar>
-          <ProgressBar variant="success" label={`${days}`} striped animated now={(days/DAYS_IN_A_MONTH)*100} key={1}/>
+          <ProgressBar variant="success" label={`${days-1}`} striped animated now={((days-1)/DAYS_IN_A_MONTH)*100} key={1}/>
           <ProgressBar variant="danger" label={`${noDays}`} striped animated now={(noDays/DAYS_IN_A_MONTH)*100} key={2}/>
         </ProgressBar>
       </div>
